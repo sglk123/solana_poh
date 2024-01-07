@@ -30,6 +30,7 @@ impl ProofOfHistory {
         self.current_timestamp
     }
 
+    // 计算当前hash
     fn calculate_hash(&self) -> Vec<u8> {
         let input = format!("{}-{:?}", self.current_slot, self.current_timestamp);
         let mut hasher = Sha256::new();
